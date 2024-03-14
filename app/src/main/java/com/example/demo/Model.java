@@ -8,6 +8,12 @@ public class Model {
     public Model() {
     }
 
+    public Model(String title, String image, String author) {
+        this.title = title;
+        this.image = image;
+        this.author = author;
+    }
+
     public String getTitle() {
         return title;
     }
