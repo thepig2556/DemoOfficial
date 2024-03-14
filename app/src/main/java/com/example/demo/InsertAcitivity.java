@@ -46,8 +46,10 @@ public class InsertAcitivity extends AppCompatActivity {
         String name = nameAdd.getText().toString();
         String img = imgAdd.getText().toString();
         String author = authorAdd.getText().toString();
-        Model manga = new Model(name,img,author);
-        mangaDbRef.push().setValue(manga);
+        String id = mangaDbRef.push().getKey();
+        Model manga = new Model(id,name,img,author);
+        assert id != null;
+        mangaDbRef.child(id).setValue(manga);
         Toast.makeText(this, "Insert Succesful", Toast.LENGTH_SHORT).show();
         nameAdd.setText("");
         imgAdd.setText("");

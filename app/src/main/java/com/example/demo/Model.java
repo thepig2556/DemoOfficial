@@ -1,17 +1,26 @@
 package com.example.demo;
 
 public class Model {
+    String id;
     String title;
     String image;
     String author;
-
     public Model() {
     }
 
-    public Model(String title, String image, String author) {
+    public Model(String id, String title, String image, String author) {
+        this.id=id;
         this.title = title;
         this.image = image;
         this.author = author;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getTitle() {
