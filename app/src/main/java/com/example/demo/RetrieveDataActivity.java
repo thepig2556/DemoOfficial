@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -110,11 +111,15 @@ DatabaseReference mangaDBRef;
             @Override
             public void onSuccess(Void aVoid) {
                 showToast("Deleted");
+                Intent intent = new Intent(RetrieveDataActivity.this, RetrieveDataActivity.class);
+                startActivity(intent);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 showToast("Error deleting record");
+                Intent intent = new Intent(RetrieveDataActivity.this, RetrieveDataActivity.class);
+                startActivity(intent);
             }
         });
     }
