@@ -93,12 +93,12 @@ public class MainActivity extends AppCompatActivity {
                 viewHolder.setOnClickListener(new ViewHolder.ClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        Toast.makeText(MainActivity.this,"Hello",Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.this,"Hello",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onItemLongClick(View view, int position) {
-                        Toast.makeText(MainActivity.this,"Hello",Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.this,"Hello",Toast.LENGTH_SHORT).show();
                     }
                 });
                 return viewHolder;
